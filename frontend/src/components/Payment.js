@@ -73,10 +73,6 @@ const Payment = () => {
                     <td>Phone Number:</td>
                     <td><input type="tel" id="phone" name="phone" /></td>
                 </tr>
-                <tr>
-                    <td>Amount:</td>
-                    <td><input type="text" id="amount" name="amount"/></td>
-                </tr>
             </table>
             <br />
             <div className='btn'>

@@ -28,9 +28,10 @@ export const Card = (props) => {
       <div className='doFlex'>
         <div className="votesAndComments">
           <input type="image" src={upvote} alt="upvote.png" className="upvoteImage" style={{width:"14px"}} onClick={fun} /><span className="upvoteCount">{counter}</span>
+          <img className="comment" src="https://img.icons8.com/external-flatart-icons-solid-flatarticons/64/000000/external-comment-chat-flatart-icons-solid-flatarticons-2.png"/>
         </div>
         
-        <div className='btn'><Link to="/payment">Donate 500rs</Link></div>
+        <div className='btn'><Link to="/payment">Donate</Link></div>
       </div>
     </div>
   )

@@ -6,7 +6,6 @@
     /*  Light Blue  */
     --right-color: #96dbe2;
   }
-
   .container{
     width: var(--form-width);
     height: var(--form-height);

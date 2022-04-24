@@ -26,6 +26,9 @@
     background-image: linear-gradient(to right, var(--left-color), var(--right-color));
     width: 30%;
     margin-left: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
 .btn a{
     text-decoration: none;
@@ -33,6 +36,11 @@
 }
 .btn:hover{
     background-image: linear-gradient(to right, #7aaa86, #76a9af);
+}
+.comment{
+    width: 20%;
+    margin-left: 10px;
+    cursor: pointer;
 }
 .title h2{
     text-align: center;
@@ -53,4 +61,7 @@
 }
 .votesAndComments{
     color: black;
+    display: flex;
+    justify-content: center;
+    margin-left: -10px;
 }

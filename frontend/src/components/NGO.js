@@ -142,14 +142,14 @@ export const NGO = () => {
     return (
         <>
             {NGOlist.map((element, index) => {
-                return <div className='ngo-card' style={{ border: "1px dashed black" }}>
+                return(<div className='ngo-card' style={{ border: "5px dotted white" }}>
                     <img src={element.Image}></img>
                     <h1>{element.Name}</h1>
                     <p>{element.AreaOfWork}</p>
                     <p>{element.Criteria}</p>
                     <p>{element.Contact}</p>
                 </div>
-            })}
+            )})};
         </>
     )
 }

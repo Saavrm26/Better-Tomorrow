@@ -8,6 +8,7 @@ import './css/ideasubmit.css'
 import './css/profile.css'
 import './css/footer.css'
 import './css/leaderboard.css'
+import './css/ngo.css'
 import {
   BrowserRouter,
   Routes,
