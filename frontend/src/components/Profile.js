@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const Profile = () => {
-  if()
   return (
     <div classNameName="prof">
       <h1 className="title-pen"> Profile </h1>
