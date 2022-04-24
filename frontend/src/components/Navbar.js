@@ -1,9 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import logo from '../assets/logo.png'
 import user from '../assets/user.png'
 
 export const Navbar = () => {
+  const navigate = useNavigate();
+  const signout = () => {
+    localStorage.removeItem("email");
+    // navigate("/");
+  }
   return (
     <header>
       <div className="logoAndNav">
@@ -28,18 +33,25 @@ export const Navbar = () => {
           <Link to="/leaderboard">Leaderboard</Link>
         </div>
       </div>
+
       <div className="profile">
-        
-        <div className="dropdown">
-        <button className="dropbtn"><span>{localStorage.email}</span></button>
-        <div className="dropdown-content">
-          <a href="/profile">Your Profile</a>
-          <a href="/">Sign out</a>
-        </div>
-      </div>
-        <Link to="/"><img src={user} alt="user.png" width="50" /></Link>
-      </div>
-      <div>
+        {(localStorage.email) ?
+          (
+            <div className="dropdown">
+              <button className="dropbtn"><span>{localStorage.email}</span></button>
+              <div className="dropdown-content">
+                <Link to="/profile">Your Profile</Link>
+                <Link to="/" onClick={signout}>Sign out</Link>
+              </div>
+              <Link to="/"><img src={user} alt="user.png" width="50" /></Link>
+            </div>
+          ) :
+          (
+            <Link to="/">
+              <span className="dropbtn"><span>Login/Signup</span></span>
+            </Link>
+          )}
+
       </div>
     </header>
   )
